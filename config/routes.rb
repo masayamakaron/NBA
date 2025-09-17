@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   end
  
   
-  resources :perfumes
+  resources :perfumes do
+   collection do
+    get 'explain'  # /perfumes/explain にアクセスできる
+   end
+  end
   get 'hello/index' => 'hello#index'
   root 'hello#index'
 

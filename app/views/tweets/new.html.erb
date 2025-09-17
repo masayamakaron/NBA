@@ -1,0 +1,23 @@
+<h1>(自分の題名)</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @tweet do |f| %>
+     <div class="field">
+    <%= f.label :試合結果 %>
+    <%= f.text_field :result, :size => 30 %>
+  </div>
+  <div class="field">
+  <%= f.label :日付 %>
+  <%= f.date_select :date %>
+</div>
+   <div class="field">
+    <%= f.label :チーム名 %>
+    <%= f.text_field :name, :size => 30 %>
+  </div>
+      <%= f.label :video %>
+      <%= f.file_field :video %>
+   </div>
+
+   <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", tweets_path %>

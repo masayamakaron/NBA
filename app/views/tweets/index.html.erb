@@ -1,0 +1,32 @@
+<h1>投稿ページ</h1>
+<h3>投稿一覧</h3>
+<%= button_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<%= link_to "新規投稿へ", new_tweet_path %>
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+   <div class="tweet">
+      <%= t.user.email %>
+       <%= t.body %>
+      <%= t.result %>
+      <%= t.date %>
+      <%= t.name %>
+    <% if user_signed_in? %>
+     <% if current_user.already_liked?(t) %>
+        <%= link_to tweet_like_path(id: t.id, tweet_id: t.id), data: { turbo_method: :delete } do %>
+            <p>いいねを取り消す</p><%= t.likes.count %>
+        <% end %>
+     <% else %>
+        <%= link_to tweet_likes_path(id: t.id, tweet_id: t.id), data: { turbo_method: :post }  do %>
+            <p>いいね</p><%= t.likes.count %>
+        <% end %>
+     <% end %>
+<% else %>
+    <p>いいねの数 = </p><%= t.likes.count %>
+<% end %>
+       <%= link_to "詳細へ", tweet_path(t.id) %>
+       <%=  video_tag t.video_url ,:controls => true if t.video?%>
+        <%= link_to "編集する", edit_tweet_path(t.id) %>
+         <%= button_to "削除する", tweet_path(t.id), method: :delete %>
+  </div>
+  <% end %>
+</div>

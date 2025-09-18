@@ -284,5 +284,38 @@ body {
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
+.team-name {
+    font-size: 1.5rem;      /* 少し大きめの文字 */
+    font-weight: bold;      /* 太字にする */
+    margin-bottom: 0.5rem;  /* 下に少し余白を追加 */
+    border-bottom: 2px solid #fdb927; /* 下線で強調 */
+    padding-bottom: 0.25rem;          /* 下線と文字の間に少し余白 */
+}
+
+.team-result {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9; /* 少し明るい背景 */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+.sindanbotan .link {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007ac1;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.sindanbotan .link:hover {
+    background-color: #005f8c;
+}
+
 
 

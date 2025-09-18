@@ -14,35 +14,83 @@
  *= require_self
  */
  /* ===== 共通カードデザイン ===== */
+/* application.scss */
+
+/* ベースリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans JP", "Helvetica", "Arial", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ヘッダーナビゲーション */
+.header-nav {
+  position: sticky;
+  top: 0;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+.header-nav nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.header-nav nav a:hover {
+  background: #ff6f61;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* チームセクション */
 .team-section {
-  max-width: 700px;          /* カードの横幅 */
-  margin: 2rem auto;         /* 上下に余白、中央寄せ */
-  padding: 1.5rem 2rem;      /* 内側余白 */
-  background-color: #ffffff; /* 白背景 */
-  border-radius: 16px;       /* 角丸 */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 軽い影 */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .team-section:hover {
-  transform: translateY(-4px); /* ホバーで少し浮く */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
+/* 各段落にマージン */
 .team-section p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #444;
-  margin: 0.5rem 0;
+  margin-bottom: 12px;
+  font-size: 16px;
 }
 
+/* 見出し風にする場合 */
 .team-section h2 {
-  font-size: 1.6rem;
-  margin-bottom: 1rem;
-  color: #1d1d1f;
-  border-bottom: 3px solid #eee;
-  padding-bottom: 0.5rem;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #222;
+  border-bottom: 2px solid #ff6f61;
+  display: inline-block;
+  padding-bottom: 5px;
 }
+
 
 /* ===== 個別チームの差し色ライン ===== */
 #golden-state-warriors { border-left: 6px solid #fdb927; } /* ゴールド */

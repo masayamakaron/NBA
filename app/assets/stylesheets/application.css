@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+ /* ===== 共通カードデザイン ===== */
+.team-section {
+  max-width: 700px;          /* カードの横幅 */
+  margin: 2rem auto;         /* 上下に余白、中央寄せ */
+  padding: 1.5rem 2rem;      /* 内側余白 */
+  background-color: #ffffff; /* 白背景 */
+  border-radius: 16px;       /* 角丸 */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 軽い影 */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-section:hover {
+  transform: translateY(-4px); /* ホバーで少し浮く */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.team-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0.5rem 0;
+}
+
+.team-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #1d1d1f;
+  border-bottom: 3px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+/* ===== 個別チームの差し色ライン ===== */
+#golden-state-warriors { border-left: 6px solid #fdb927; } /* ゴールド */
+#dallas-mavericks { border-left: 6px solid #00538c; }      /* ブルー */
+#oklahoma-city-thunder { border-left: 6px solid #007ac1; } /* ライトブルー */
+#memphis-grizzlies { border-left: 6px solid #5d76a9; }     /* ネイビー */
+#los-angeles-lakers { border-left: 6px solid #552583; }     /* パープル */
+#miami-heat { border-left: 6px solid #98002e; }             /* レッド */
+#milwaukee-bucks { border-left: 6px solid #00471b; }        /* グリーン */
+#sacramento-kings { border-left: 6px solid #5a2d81; }      /* パープル */
+#minnesota-timberwolves { border-left: 6px solid #0c2340; }/* ネイビー */
+#charlotte-hornets { border-left: 6px solid #1d1160; }      /* ダークパープル */
+#cleveland-cavaliers { border-left: 6px solid #6f263d; }   /* ワインレッド */
+#detroit-pistons { border-left: 6px solid #ed174c; }        /* レッド */
+#boston-celtics { border-left: 6px solid #007a33; }        /* グリーン */
+#new-york-knicks { border-left: 6px solid #006bb6; }       /* ブルー */
+#denver-nuggets { border-left: 6px solid #0e2240; }        /* ネイビー */
+#utah-jazz { border-left: 6px solid #00471b; }             /* グリーン */
+

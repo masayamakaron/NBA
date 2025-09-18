@@ -59,7 +59,6 @@ group :test do
 end
 gem 'carrierwave'
 gem 'cloudinary'
-gem 'dotenv-rails'
 gem 'devise'
 
 # PostgreSQL → 本番用

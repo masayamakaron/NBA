@@ -61,7 +61,9 @@ gem 'carrierwave'
 gem 'cloudinary'
 gem 'dotenv-rails'
 gem 'devise'
+
 # PostgreSQL → 本番用
 group :production do
   gem 'pg'
 end
+gem 'sass-rails'

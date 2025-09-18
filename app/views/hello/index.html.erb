@@ -1,4 +1,20 @@
+<div class="home-container">
+  <h1>NBAファンのためのポータル</h1>
 
-<%= link_to "ログイン", tweets_path %>
-<%= link_to "新規登録", new_user_registration_path %>
-<%= link_to "おすすめNBAチーム診断", perfumes_path %>
+  <div class="link-cards">
+    <div class="card">
+      <h2>マイページ</h2>
+      <p>ログインしてNBAの試合結果や投稿を共有しよう！</p>
+      <div class="card-links">
+        <%= link_to "ログイン", tweets_path, class: "btn btn-login" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "btn btn-signup" %>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>おすすめNBAチーム診断</h2>
+      <p>あなたにピッタリのNBAチームを診断しよう！</p>
+      <%= link_to "診断スタート", perfumes_path, class: "btn btn-diagnosis" %>
+    </div>
+  </div>
+</div>

@@ -32,31 +32,29 @@ body {
 
 /* ヘッダーナビゲーション */
 .header-nav {
-  position: sticky;
-  top: 0;
-  background-color: #1a1a1a;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 0;
-  z-index: 100;
+  flex-wrap: wrap;      /* 画面幅が狭くても折り返す */
+  gap: 10px;            /* ナビリンク間のスペース */
+  padding: 10px 20px;   /* 上下の余白を小さく */
+  background-color: #1a1a1a; /* 好みで色変更 */
 }
 
-.header-nav nav a {
+.header-nav nav {
+  margin: 0;
+}
+
+.header-nav a {
   color: #fff;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: 0.3s;
   font-weight: 500;
-  background: rgba(255, 255, 255, 0.05);
+  font-size: 14px;       /* 少し小さめにしてスッキリ */
+  padding: 6px 10px;     /* クリックしやすいサイズ */
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
-.header-nav nav a:hover {
-  background: #ff6f61;
-  color: #fff;
-  transform: scale(1.05);
+.header-nav a:hover {
+  background-color: #444; /* ホバーで少し明るく */
 }
 
 /* チームセクション */
@@ -109,4 +107,182 @@ body {
 #new-york-knicks { border-left: 6px solid #006bb6; }       /* ブルー */
 #denver-nuggets { border-left: 6px solid #0e2240; }        /* ネイビー */
 #utah-jazz { border-left: 6px solid #00471b; }             /* グリーン */
+
+.home-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.link-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #ffd700; /* NBA感あるゴールド */
+}
+
+.card p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.card-links {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-login {
+  background-color: #007ac1;
+  color: #fff;
+}
+
+.btn-login:hover {
+  background-color: #005f8c;
+}
+
+.btn-signup {
+  background-color: #fdb927;
+  color: #000;
+}
+
+.btn-signup:hover {
+  background-color: #e6b800;
+}
+
+.btn-diagnosis {
+  background-color: #98002e;
+  color: #fff;
+  display: inline-block;
+}
+
+.btn-diagnosis:hover {
+  background-color: #7a001f;
+}
+
+.perfume-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.question-card {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.question-card p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #ffd700;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options label {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.options input[type="radio"] {
+  margin-right: 8px;
+}
+
+.options input[type="radio"]:checked + label {
+  background-color: #007ac1;
+  color: #fff;
+}
+
+.sindanbotan {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.sindanbotan .btn-diagnosis {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #98002e;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sindanbotan .btn-diagnosis:hover {
+  background-color: #7a001f;
+}
+
+.sindan-start {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.sindan-start h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+.start-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #fdb927, #552583);
+  color: white;
+  font-weight: bold;
+  padding: 15px 35px;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
 
